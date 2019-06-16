@@ -1,0 +1,203 @@
+* {
+	box-sizing: border-box;
+}
+.mt-40{
+	margin-top: 40px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #eaeaea;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+.header{
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	height: 50px;
+	background-color: #008B8B;
+	border-bottom: 3px solid #6495ED;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+}
+/* Bagian logo header and side-nav*/
+.logo {
+	height: 44px;
+	padding: 10px;
+	font-weight: 700;
+}
+.header .logo {
+	display: none;
+	float: left;
+	height: 44px;
+	z-index: 1;
+	padding: 10px;
+	font-weight: 700;
+	color: #fff;
+}
+.logo span {
+	margin-left: 5px;
+	text-transform: uppercase;
+}
+.nav-trigger {
+	position: relative;
+	float: left;
+	width: 20px;
+	height: 44px;
+	left: 20px;
+	display: block;	
+}
+.nav-trigger span, .nav-trigger span:before, span:after {
+	width: 20px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+}
+.nav-trigger span {
+	top: 50%;
+}
+.nav-trigger span:before, .nav-trigger span:after {
+	content: '';
+}
+.nav-trigger span:before {
+	top: -6px;
+}
+.nav-trigger span:after {
+	top: 6px;
+}
+
+/* side navigation styles */
+.side-nav {
+	position: fixed;
+	width: 230px;
+	margin-top: 44px;
+	background-color: #778899;
+	z-index: 1;
+	display: none;
+	overflow: auto;
+	border-right: 1px solid #fff;
+	height: 100vh;
+}
+.side-nav.visible {
+	display: block;
+}
+.side-nav ul {
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+}
+.side-nav ul li {
+	padding: 8px 8px;
+	padding-left: 20px;
+	border-bottom: 1px solid #DCDCDC;
+	position: relative;
+}
+.side-nav ul li.active:before {
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+}
+.side-nav ul li a {
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+}
+.side-nav ul li i {
+	color: #FFF;
+	min-width: 20px;
+	text-align: center;
+}
+.side-nav ul li span:nth-child(2) {
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.collapse li span:nth-child(2) {
+	color: #F5F5F5;
+}
+/* main content styles */
+.main-content {
+	padding: 40px;
+	margin-top: 0;
+	padding: 0;
+	padding-top: 44px;
+	height: 100%;
+}
+
+/* Set Untuk tablet and higher(desktop)*/
+@media screen and (min-width: 600px) {
+	.side-nav {
+		display: none;
+		width: 230px;
+		height: 100vh;
+	}
+}
+
+/* Set Untuk desktop */
+@media screen and (min-width: 800px) {
+	.side-nav {
+		display: none;
+		width: 230px;
+		height: 100vh;
+	}
+}
+
+/* main box container */
+.main {
+	display: flex;
+	flex-flow: row wrap;
+}
+.widget {
+	flex-basis: 100%;
+	flex-grow: 10;
+	min-height: 90px;
+	margin: 20px 100px;
+	border-radius: 6px;
+	background-color: #ffffff;
+	position: relative;
+	overflow: auto;
+}
+.widget .title {
+	background-color: #eef1f7;
+	border-bottom: 1px solid #dfe4ec;
+	padding: 10px;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	color: #617085;
+	font-weight: 600;
+}
+.widget .chart{
+	margin: 10px;
+}
+.judul{
+	text-align: center;
+	flex-basis: 100%;
+	height: 60px;
+	position: relative;
+	background-color: #eef1f7;
+	border-bottom: 1px solid #dfe4ec;
+	padding: 10px;
+	border-radius: 1px;
+	color: #617085;
+	font-weight: 600;
+	font-size: 30px;
+}
+.alert{
+	margin: 20px 100px;
+	text-align: center;
+	flex-basis: 100%;
+	height: 40px;
+	position: relative;
+	background-color: yellow;
+	border-bottom: 1px solid #dfe4ec;
+	padding: 10px;
+	border-radius: 1px;
+	color: #617085;
+	font-weight: 600;
+	font-size: 20px;
+}
